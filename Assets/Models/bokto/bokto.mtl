@@ -1,0 +1,92 @@
+newmtl bokto_finallllllll2:file17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ara_container_black.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd -mm_0_0.713115_eye_snap.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl bokto_finallllllll2:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd faceuv.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd lbokto_hair_copy.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd -mm_0_0.598367_gum.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd swod_uv.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert10SG
+illum 4
+Kd 1.00 0.63 0.35
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl bokto_finallllllll2:lambert11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd gho_uvmaping.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd lefthanduv_copy.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert16SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bothleguv_copy.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd -mm_0_0.729503_teeth_copy.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd belt_copy.jpg
+Ni 1.00
+newmtl bokto_finallllllll2:lambert21SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bag_copy.jpg
+Ni 1.00
