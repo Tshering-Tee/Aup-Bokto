@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 mousePosDown;
     Vector3 mousePosUp;
     public Transform player;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,14 +41,14 @@ public class PlayerMovement : MonoBehaviour
             if (deltaX > 0)
             {
                 Debug.Log("Swap right");
-                player.eulerAngles = new Vector3(playerRigidbody.velocity.x, 90, playerRigidbody.velocity.z);
-                Vector3 movement = new Vector3(playerRigidbody.velocity.x, playerRigidbody.velocity.y, forwardSpeed);
+                player.eulerAngles = new Vector3(playerRigidbody.velocity.x, transform.eulerAngles.y + 90f, playerRigidbody.velocity.z);
+                // Vector3 movement = new Vector3(playerRigidbody.velocity.x, playerRigidbody.velocity.y, forwardSpeed);
 
             }
             else if (deltaX < 0)
             {
                 Debug.Log("Swap Left");
-                player.eulerAngles = new Vector3(playerRigidbody.velocity.x, -90, playerRigidbody.velocity.z);
+                player.eulerAngles = new Vector3(playerRigidbody.velocity.x, transform.eulerAngles.y + -90f, playerRigidbody.velocity.z);
             }
         }
         else
@@ -54,21 +56,19 @@ public class PlayerMovement : MonoBehaviour
             if (deltaY > 0)
             {
                 Debug.Log("Swap up");
+                Jump();
+
             }
             else if (deltaY < 0)
             {
                 Debug.Log("Swap down");
+                Slide();
             }
         }
     }
 
     void Update()
     {
-
-        if (Input.GetKeyDown("space") && hadJumped)
-        {
-            jumpRequest = true;
-        }
 
         // horizontal and vertical movement of player
         if (Input.GetMouseButtonDown(0))
@@ -80,23 +80,6 @@ public class PlayerMovement : MonoBehaviour
         {
             mousePosUp = Input.mousePosition;
             FigureSwap();
-            // if (mousePosDown.x - mousePosUp.x < 0)
-            // {
-            //     Debug.Log("Rigt Swap");
-            // }
-            // else
-            // {
-            //     Debug.Log("Left Swap");
-            // }
-
-            // if (mousePosDown.y - mousePosUp.y < 0)
-            // {
-            //     Debug.Log("Swap up");
-            // }
-            // else
-            // {
-            //     Debug.Log("Swap Down");
-            // }
         }
 
     }
@@ -104,17 +87,29 @@ public class PlayerMovement : MonoBehaviour
     {
         //playerMovement
         // Move the player in the direction they are facing
-        Vector3 movementDirection = transform.forward * forwardSpeed;
-        Vector3 movement = new Vector3(movementDirection.x, playerRigidbody.velocity.y, movementDirection.z);
-        playerRigidbody.velocity = movement;
+        // Vector3 movementDirection = transform.forward * forwardSpeed;
+        // Vector3 movement = new Vector3(movementDirection.x, playerRigidbody.velocity.y, movementDirection.z);
+        // playerRigidbody.velocity = movement;
 
-        //jump
-        if (jumpRequest)
+        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        
+    }
+
+    public void Jump()
+    {
+        if (hadJumped)
         {
+            animator.SetTrigger("isJumping");
             var jump = new Vector3(playerRigidbody.velocity.x, jumpPower, playerRigidbody.velocity.z);
             playerRigidbody.AddForce(jump, ForceMode.Impulse);
+            Debug.Log("Hello");
             hadJumped = false;
-            jumpRequest = false;
+
         }
+    }
+
+    public void Slide()
+    {
+        animator.SetTrigger("Slide");
     }
 }
